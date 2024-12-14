@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Painter>
+  <Edges>
+    <Line id="e1" formId="s1"  toId="s2" text="得到"></Line>
+
+    <Line id="e2" formId="s1"  toId="s4"  text="二线"></Line>
+
+    <Line id="e3" formId="s2"  toId="s5"  text="科普"></Line>
+
+    <Line id="e4" formId="s5"  toId="s3"  text="显示"></Line>
+
+    <Line id="e5" formId="s2"  toId="s3"  text="前往"></Line>
+
+    <Line id="e6" formId="s1"  toId="s5"  text="展示"></Line>
+  </Edges>
+  <Shapes>
+    <Rectangle id="s1" posX="100" posY="100" width="30" height="15" text="张胜男"></Rectangle>
+
+    <Circle id="s2" posX="200" posY="200" radius="20" text="环境"></Circle>
+
+    <Circle id="s3" posX="200" posY="280" radius="25" text="红绿"></Circle>
+
+    <Circle id="s4" posX="200" posY="360" radius="15" text="流控"></Circle>
+
+    <Circle id="s5" posX="360" posY="200" radius="14" text="二斗"></Circle>
+
+    <Rectangle id="sperson" posX="500" posY="100" width="120" height="60" text="人员"></Rectangle>
+
+    <Ellipse id="sthing" posX="500" posY="300" width="120" height="60" text="事务"></Ellipse>
+  </Shapes>
+</Painter>
