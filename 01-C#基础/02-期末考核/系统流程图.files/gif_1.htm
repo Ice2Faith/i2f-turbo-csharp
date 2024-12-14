@@ -1,0 +1,156 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>
+系统流程图精简版
+</title>
+<script type="text/javascript" language="javascript">
+function UpdateTooltip(){};
+function OnShapeClick(){};
+</script>
+
+<script src="gif_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+	if(parent.isUpLevel)
+	{
+		location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+	}
+</script>
+
+
+
+<script type="text/jscript" language="jscript">
+
+var pageID = 0;
+
+var isUpLevel = parent.isUpLevel;
+var OnShapeClick = null;
+if (!parent.isMac)
+{
+	OnShapeClick = parent.OnShapeClick;
+}
+
+var OnShapeKey = parent.OnShapeKey;
+var UpdateTooltip = parent.UpdateTooltip;
+var clickMenu = parent.clickMenu;
+var toggleMenuDiv = parent.toggleMenuDiv;
+var toggleMenuLink = parent.toggleMenuLink;
+var GoToPage = parent.GoToPage;
+
+
+if (parent.isUpLevel)
+{
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			var fileEntry = parent.g_FileList[parent.g_CurPageIndex];
+			var fileToLoad = fileToLoad = fileEntry.PriImage;
+			if (fileEntry.SecImage.length > 0)
+			{
+				fileToLoad = fileEntry.SecImage;
+			}
+
+			location.replace(fileToLoad);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+
+	var viewMgr = new parent.CViewMgr();
+	parent.viewMgr = viewMgr;
+
+	viewMgr.SupportsDetails = true;
+	viewMgr.SupportsSearch = true;
+
+	viewMgr.put_Location = ViewMgrSetRasterLocation;
+	viewMgr.visBBoxLeft = 0.195184;
+	viewMgr.visBBoxRight = 8.190643;
+	viewMgr.visBBoxBottom = 4.053451;
+	viewMgr.visBBoxTop = 11.418990;
+	viewMgr.highlightDiv = null;
+}
+
+function load ()
+{
+	if(isUpLevel)
+	{
+		arrowdiv.innerHTML = '<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>';
+
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.CurPageUpdate (pageIndex);
+	}
+}
+
+function unload()
+{
+	if(isUpLevel)
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+}
+
+window.onload = load;
+window.onunload = unload;
+document.onclick = clickMenu;
+
+</script>
+</head>
+
+<body class="pageView" bgcolor="#FFFFFF">
+
+<div id=arrowdiv style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+<DIV id=RasterDiv>
+
+
+<center>
+  <IMG id="ConvertedImage" SRC="gif_1.gif" ALT="系统流程图" name=RasterImage BORDER="0" USEMAP="#visImageMap">
+</center>
+
+<MAP NAME="visImageMap">
+  <AREA shape="POLYGON" tabindex="1" ALT="数据文件" origTitle="数据文件" TITLE="数据文件"  target="_top" COORDS=" 208,518 208,519 207,520 207,521 207,522 206,523 206,524 205,525 205,526 204,528 204,529 204,530 203,531 203,532 203,533 203,534 202,535 202,536 202,537 202,538 202,539 201,541 201,542 201,543 201,544 201,545 201,546 201,547 201,548 201,549 201,551 201,552 201,553 201,554 201,555 201,556 202,557 202,558 202,559 202,561 202,562 203,563 203,564 203,565 203,566 204,567 204,568 204,569 205,570 205,571 206,572 206,573 207,574 207,575 207,576 208,577 208,578 209,578 209,577 208,576 208,575 207,574 207,573 207,572 206,571 206,570 205,569 205,568 205,567 204,566 204,565 204,564 204,563 203,561 203,560 203,559 203,558 203,557 202,556 202,555 202,554 202,553 202,552 202,551 202,549 202,548 202,547 202,546 202,545 202,544 202,543 202,542 202,541 203,540 203,539 203,537 203,536 203,535 204,534 204,533 204,532 204,531 205,530 205,529 205,528 206,527 206,526 207,525 207,524 207,523 208,522 208,521 209,520 209,519" onmouseover="UpdateTooltip(this,0,170)" onfocus="UpdateTooltip(this,0,170)" onclick="return OnShapeClick(0,170);" onkeyup="OnShapeKey(0,170);">
+  <AREA shape="POLYGON" tabindex="1" ALT="数据文件" origTitle="数据文件" TITLE="数据文件"  target="_top" COORDS=" 113,540 113,555 158,555 158,540 113,540" onmouseover="UpdateTooltip(this,0,170)" onfocus="UpdateTooltip(this,0,170)" onclick="return OnShapeClick(0,170);" onkeyup="OnShapeKey(0,170);">
+  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 451,569 499,569 499,521 451,521 451,569" onmouseover="UpdateTooltip(this,0,163)" onfocus="UpdateTooltip(this,0,163)" onclick="return OnShapeClick(0,163);" onkeyup="OnShapeKey(0,163);">
+  <AREA shape="POLYGON" tabindex="1" ALT="选学生" origTitle="选学生" TITLE="选学生"  target="_top" COORDS=" 473,442 521,442 521,424 473,424 473,442" onmouseover="UpdateTooltip(this,0,73)" onfocus="UpdateTooltip(this,0,73)" onclick="return OnShapeClick(0,73);" onkeyup="OnShapeKey(0,73);">
+  <AREA shape="POLYGON" tabindex="1" ALT="选导师" origTitle="选导师" TITLE="选导师"  target="_top" COORDS=" 311,442 359,442 359,424 311,424 311,442" onmouseover="UpdateTooltip(this,0,72)" onfocus="UpdateTooltip(this,0,72)" onclick="return OnShapeClick(0,72);" onkeyup="OnShapeKey(0,72);">
+  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 221,463 651,463 651,399 221,399 221,463" onmouseover="UpdateTooltip(this,0,75)" onfocus="UpdateTooltip(this,0,75)" onclick="return OnShapeClick(0,75);" onkeyup="OnShapeKey(0,75);">
+  <AREA shape="POLYGON" tabindex="1" ALT="个人信息显示" origTitle="个人信息显示" TITLE="个人信息显示"  target="_top" COORDS=" 449,355 542,355 542,330 449,330 449,355" onmouseover="UpdateTooltip(this,0,57)" onfocus="UpdateTooltip(this,0,57)" onclick="return OnShapeClick(0,57);" onkeyup="OnShapeKey(0,57);">
+  <AREA shape="POLYGON" tabindex="1" ALT="通知信息" origTitle="通知信息" TITLE="通知信息"  target="_top" COORDS=" 310,355 362,355 362,330 310,330 310,355" onmouseover="UpdateTooltip(this,0,56)" onfocus="UpdateTooltip(this,0,56)" onclick="return OnShapeClick(0,56);" onkeyup="OnShapeKey(0,56);">
+  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 221,370 651,370 651,318 221,318 221,370" onmouseover="UpdateTooltip(this,0,54)" onfocus="UpdateTooltip(this,0,54)" onclick="return OnShapeClick(0,54);" onkeyup="OnShapeKey(0,54);">
+  <AREA shape="POLYGON" tabindex="1" ALT="系统设置" origTitle="系统设置" TITLE="系统设置"  target="_top" COORDS=" 160,357 178,357 178,270 160,270 160,357" onmouseover="UpdateTooltip(this,0,47)" onfocus="UpdateTooltip(this,0,47)" onclick="return OnShapeClick(0,47);" onkeyup="OnShapeKey(0,47);">
+  <AREA shape="POLYGON" tabindex="1" ALT="导师管理" origTitle="导师管理" TITLE="导师管理"  target="_top" COORDS=" 116,357 134,357 134,270 116,270 116,357" onmouseover="UpdateTooltip(this,0,46)" onfocus="UpdateTooltip(this,0,46)" onclick="return OnShapeClick(0,46);" onkeyup="OnShapeKey(0,46);">
+  <AREA shape="POLYGON" tabindex="1" ALT="学生管理" origTitle="学生管理" TITLE="学生管理"  target="_top" COORDS=" 74,357 91,357 91,270 74,270 74,357" onmouseover="UpdateTooltip(this,0,43)" onfocus="UpdateTooltip(this,0,43)" onclick="return OnShapeClick(0,43);" onkeyup="OnShapeKey(0,43);">
+  <AREA shape="POLYGON" tabindex="1" ALT="系统公告管理" origTitle="系统公告管理" TITLE="系统公告管理"  target="_top" COORDS=" 32,357 50,357 50,270 32,270 32,357" onmouseover="UpdateTooltip(this,0,16)" onfocus="UpdateTooltip(this,0,16)" onclick="return OnShapeClick(0,16);" onkeyup="OnShapeKey(0,16);">
+  <AREA shape="POLYGON" tabindex="1" ALT="管理主窗口" origTitle="管理主窗口" TITLE="管理主窗口"  target="_top" COORDS=" 56,246 136,246 136,228 56,228 56,246" onmouseover="UpdateTooltip(this,0,11)" onfocus="UpdateTooltip(this,0,11)" onclick="return OnShapeClick(0,11);" onkeyup="OnShapeKey(0,11);">
+  <AREA shape="POLYGON" tabindex="1" ALT="注册" origTitle="注册" TITLE="注册"  target="_top" COORDS=" 264,137 352,137 352,113 264,113 264,137" onmouseover="UpdateTooltip(this,0,25)" onfocus="UpdateTooltip(this,0,25)" onclick="return OnShapeClick(0,25);" onkeyup="OnShapeKey(0,25);">
+  <AREA shape="POLYGON" tabindex="1" ALT="登录" origTitle="登录" TITLE="登录"  target="_top" COORDS=" 400,203 434,219 469,203 434,186 400,203" onmouseover="UpdateTooltip(this,0,24)" onfocus="UpdateTooltip(this,0,24)" onclick="return OnShapeClick(0,24);" onkeyup="OnShapeKey(0,24);">
+  <AREA shape="POLYGON" tabindex="1" ALT="已注册" origTitle="已注册" TITLE="已注册"  target="_top" COORDS=" 451,116 434,109 418,116 418,116 418,117 400,125 434,141 469,125 451,117 451,116 451,116" onmouseover="UpdateTooltip(this,0,23)" onfocus="UpdateTooltip(this,0,23)" onclick="return OnShapeClick(0,23);" onkeyup="OnShapeKey(0,23);">
+  <AREA shape="POLYGON" tabindex="1" ALT="导师" origTitle="导师" TITLE="导师"  target="_top" COORDS=" 328,189 372,189 372,165 328,165 328,189" onmouseover="UpdateTooltip(this,0,10)" onfocus="UpdateTooltip(this,0,10)" onclick="return OnShapeClick(0,10);" onkeyup="OnShapeKey(0,10);">
+  <AREA shape="POLYGON" tabindex="1" ALT="学生" origTitle="学生" TITLE="学生"  target="_top" COORDS=" 234,189 276,189 276,165 234,165 234,189" onmouseover="UpdateTooltip(this,0,8)" onfocus="UpdateTooltip(this,0,8)" onclick="return OnShapeClick(0,8);" onkeyup="OnShapeKey(0,8);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Web端" origTitle="Web端" TITLE="Web端"  target="_top" COORDS=" 389,93 477,93 477,69 389,69 389,93" onmouseover="UpdateTooltip(this,0,7)" onfocus="UpdateTooltip(this,0,7)" onclick="return OnShapeClick(0,7);" onkeyup="OnShapeKey(0,7);">
+  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 220,296 651,296 651,58 220,58 220,296" onmouseover="UpdateTooltip(this,0,45)" onfocus="UpdateTooltip(this,0,45)" onclick="return OnShapeClick(0,45);" onkeyup="OnShapeKey(0,45);">
+  <AREA shape="POLYGON" tabindex="1" ALT="登录" origTitle="登录" TITLE="登录"  target="_top" COORDS=" 62,165 96,181 130,165 96,149 62,165" onmouseover="UpdateTooltip(this,0,42)" onfocus="UpdateTooltip(this,0,42)" onclick="return OnShapeClick(0,42);" onkeyup="OnShapeKey(0,42);">
+  <AREA shape="POLYGON" tabindex="1" ALT="系统入口" origTitle="系统入口" TITLE="系统入口"  target="_top" COORDS=" 173,24 253,24 253,0 173,0 173,24" onmouseover="UpdateTooltip(this,0,6)" onfocus="UpdateTooltip(this,0,6)" onclick="return OnShapeClick(0,6);" onkeyup="OnShapeKey(0,6);">
+  <AREA shape="POLYGON" tabindex="1" ALT="管理员Client端" origTitle="管理员Client端" TITLE="管理员Client端"  target="_top" COORDS=" 48,93 144,93 144,69 48,69 48,93" onmouseover="UpdateTooltip(this,0,5)" onfocus="UpdateTooltip(this,0,5)" onclick="return OnShapeClick(0,5);" onkeyup="OnShapeKey(0,5);">
+  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 449,479 651,479 651,302 449,302 449,479" onmouseover="UpdateTooltip(this,0,4)" onfocus="UpdateTooltip(this,0,4)" onclick="return OnShapeClick(0,4);" onkeyup="OnShapeKey(0,4);">
+  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 221,479 443,479 443,302 221,302 221,479" onmouseover="UpdateTooltip(this,0,3)" onfocus="UpdateTooltip(this,0,3)" onclick="return OnShapeClick(0,3);" onkeyup="OnShapeKey(0,3);">
+  <AREA shape="POLYGON" tabindex="1" ALT="" origTitle="" TITLE=""  target="_top" COORDS=" 0,479 208,479 208,58 0,58 0,479" onmouseover="UpdateTooltip(this,0,2)" onfocus="UpdateTooltip(this,0,2)" onclick="return OnShapeClick(0,2);" onkeyup="OnShapeKey(0,2);">
+</MAP>
+
+
+
+</DIV>
+
+</body>
+</html>
+

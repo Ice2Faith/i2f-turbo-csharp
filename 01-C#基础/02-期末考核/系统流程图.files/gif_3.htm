@@ -1,0 +1,140 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>
+系统流程图精简版
+</title>
+<script type="text/javascript" language="javascript">
+function UpdateTooltip(){};
+function OnShapeClick(){};
+</script>
+
+<script src="gif_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+	if(parent.isUpLevel)
+	{
+		location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+	}
+</script>
+
+
+
+<script type="text/jscript" language="jscript">
+
+var pageID = 5;
+
+var isUpLevel = parent.isUpLevel;
+var OnShapeClick = null;
+if (!parent.isMac)
+{
+	OnShapeClick = parent.OnShapeClick;
+}
+
+var OnShapeKey = parent.OnShapeKey;
+var UpdateTooltip = parent.UpdateTooltip;
+var clickMenu = parent.clickMenu;
+var toggleMenuDiv = parent.toggleMenuDiv;
+var toggleMenuLink = parent.toggleMenuLink;
+var GoToPage = parent.GoToPage;
+
+
+if (parent.isUpLevel)
+{
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			var fileEntry = parent.g_FileList[parent.g_CurPageIndex];
+			var fileToLoad = fileToLoad = fileEntry.PriImage;
+			if (fileEntry.SecImage.length > 0)
+			{
+				fileToLoad = fileEntry.SecImage;
+			}
+
+			location.replace(fileToLoad);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+
+	var viewMgr = new parent.CViewMgr();
+	parent.viewMgr = viewMgr;
+
+	viewMgr.SupportsDetails = true;
+	viewMgr.SupportsSearch = true;
+
+	viewMgr.put_Location = ViewMgrSetRasterLocation;
+	viewMgr.visBBoxLeft = 0.695266;
+	viewMgr.visBBoxRight = 7.499382;
+	viewMgr.visBBoxBottom = 1.883176;
+	viewMgr.visBBoxTop = 9.829423;
+	viewMgr.highlightDiv = null;
+}
+
+function load ()
+{
+	if(isUpLevel)
+	{
+		arrowdiv.innerHTML = '<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>';
+
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.CurPageUpdate (pageIndex);
+	}
+}
+
+function unload()
+{
+	if(isUpLevel)
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+}
+
+window.onload = load;
+window.onunload = unload;
+document.onclick = clickMenu;
+
+</script>
+</head>
+
+<body class="pageView" bgcolor="#FFFFFF">
+
+<div id=arrowdiv style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+<DIV id=RasterDiv>
+
+
+<center>
+  <IMG id="ConvertedImage" SRC="gif_3.gif" ALT="页-3" name=RasterImage BORDER="0" USEMAP="#visImageMap">
+</center>
+
+<MAP NAME="visImageMap">
+  <AREA shape="POLYGON" tabindex="1" ALT="选择该学生" origTitle="选择该学生" TITLE="选择该学生"  target="_top" COORDS=" 326,398 364,413 401,398 364,384 326,398" onmouseover="UpdateTooltip(this,5,34)" onfocus="UpdateTooltip(this,5,34)" onclick="return OnShapeClick(5,34);" onkeyup="OnShapeKey(5,34);">
+  <AREA shape="POLYGON" tabindex="1" ALT="选择该学生" origTitle="选择该学生" TITLE="选择该学生"  target="_top" COORDS=" 323,309 360,324 398,309 360,295 323,309" onmouseover="UpdateTooltip(this,5,32)" onfocus="UpdateTooltip(this,5,32)" onclick="return OnShapeClick(5,32);" onkeyup="OnShapeKey(5,32);">
+  <AREA shape="POLYGON" tabindex="1" ALT="选择该V1学生" origTitle="选择该V1学生" TITLE="选择该V1学生"  target="_top" COORDS=" 386,213 364,205 342,213 338,213 338,215 327,219 338,224 338,225 340,225 364,234 388,225 390,225 390,224 401,219 390,215 390,213 386,213" onmouseover="UpdateTooltip(this,5,31)" onfocus="UpdateTooltip(this,5,31)" onclick="return OnShapeClick(5,31);" onkeyup="OnShapeKey(5,31);">
+  <AREA shape="POLYGON" tabindex="1" ALT="第一志愿未被选" origTitle="第一志愿未被选" TITLE="第一志愿未被选"  target="_top" COORDS=" 15,326 16,326 17,327 17,327 18,327 19,328 20,328 21,328 21,329 22,329 23,329 24,330 25,330 25,330 26,330 27,330 28,331 29,331 30,331 31,331 31,331 32,331 33,331 34,331 35,331 36,331 37,331 38,331 38,331 39,331 40,331 41,331 42,331 43,331 44,331 44,331 45,330 46,330 47,330 48,330 49,330 50,329 50,329 51,329 52,328 53,328 54,328 54,327 55,327 56,327 57,326 57,326 58,325 59,325 60,325 61,324 61,324 62,324 63,323 64,323 65,323 65,322 66,322 67,322 68,322 69,321 70,321 71,321 71,321 72,321 73,321 74,320 75,320 76,320 77,320 77,320 78,320 79,320 80,320 81,320 82,320 83,320 83,320 84,321 85,321 86,321 87,321 88,321 89,321 89,322 90,322 91,322 92,322 93,323 94,323 94,323 95,324 96,324 97,324 98,325 98,325 99,325 100,326 100,287 15,287 15,326" onmouseover="UpdateTooltip(this,5,25)" onfocus="UpdateTooltip(this,5,25)" onclick="return OnShapeClick(5,25);" onkeyup="OnShapeKey(5,25);">
+  <AREA shape="POLYGON" tabindex="1" ALT="if（名额未满&#60;StudentCount未达到指定值&#62;）" origTitle="if（名额未满&#60;StudentCount未达到指定值&#62;）" TITLE="if（名额未满&#60;StudentCount未达到指定值&#62;）"  target="_top" COORDS=" 271,511 296,496 271,480 271,478 269,478 248,465 226,478 224,478 224,480 200,496 224,511 224,512 225,512 248,526 270,512 271,512 271,511" onmouseover="UpdateTooltip(this,5,21)" onfocus="UpdateTooltip(this,5,21)" onclick="return OnShapeClick(5,21);" onkeyup="OnShapeKey(5,21);">
+  <AREA shape="POLYGON" tabindex="1" ALT="差额补选" origTitle="差额补选" TITLE="差额补选"  target="_top" COORDS=" 325,510 407,510 407,481 325,481 325,510" onmouseover="UpdateTooltip(this,5,20)" onfocus="UpdateTooltip(this,5,20)" onclick="return OnShapeClick(5,20);" onkeyup="OnShapeKey(5,20);">
+  <AREA shape="POLYGON" tabindex="1" ALT="if（state=V2Out）且V3=导师号" origTitle="if（state=V2Out）且V3=导师号" TITLE="if（state=V2Out）且V3=导师号"  target="_top" COORDS=" 275,408 293,398 284,393 284,387 275,387 273,387 251,375 229,387 224,387 219,387 219,393 209,398 227,409 227,409 228,409 251,422 274,409 275,409 275,408" onmouseover="UpdateTooltip(this,5,14)" onfocus="UpdateTooltip(this,5,14)" onclick="return OnShapeClick(5,14);" onkeyup="OnShapeKey(5,14);">
+  <AREA shape="POLYGON" tabindex="1" ALT="if（state=V1Out）且V2=导师号" origTitle="if（state=V1Out）且V2=导师号" TITLE="if（state=V1Out）且V2=导师号"  target="_top" COORDS=" 275,319 293,309 284,304 284,297 275,297 273,297 251,285 229,297 224,297 219,297 219,304 209,309 227,319 227,320 228,320 251,333 274,320 275,320 275,319" onmouseover="UpdateTooltip(this,5,12)" onfocus="UpdateTooltip(this,5,12)" onclick="return OnShapeClick(5,12);" onkeyup="OnShapeKey(5,12);">
+  <AREA shape="POLYGON" tabindex="1" ALT="if（state=Ready）且V1==导师号" origTitle="if（state=Ready）且V1==导师号" TITLE="if（state=Ready）且V1==导师号"  target="_top" COORDS=" 281,227 293,220 283,214 283,213 282,213 254,196 225,213 225,213 225,214 215,220 227,227 227,236 236,236 241,236 254,244 267,236 281,236 281,227" onmouseover="UpdateTooltip(this,5,10)" onfocus="UpdateTooltip(this,5,10)" onclick="return OnShapeClick(5,10);" onkeyup="OnShapeKey(5,10);">
+  <AREA shape="POLYGON" tabindex="1" ALT="学生已选导师--导师未选学生状态(S3)： 学生选三个志愿：V1、V2、V3（可重复）志愿优先级V1&#62;V2&#62;V3" origTitle="学生已选导师--导师未选学生状态(S3)： 学生选三个志愿：V1、V2、V3（可重复）志愿优先级V1&#62;V2&#62;V3" TITLE="学生已选导师--导师未选学生状态(S3)： 学生选三个志愿：V1、V2、V3（可重复）志愿优先级V1&#62;V2&#62;V3"  target="_top" COORDS=" 15,144 16,145 16,145 17,146 18,146 18,146 19,147 20,147 20,148 21,148 22,148 23,149 23,149 24,149 25,149 26,150 26,150 27,150 28,150 29,150 30,151 30,151 31,151 32,151 33,151 33,151 34,151 35,151 36,151 37,151 37,151 38,151 39,151 40,151 41,151 41,151 42,151 43,151 44,150 45,150 45,150 46,150 47,150 48,149 48,149 49,149 50,149 51,148 51,148 52,148 53,147 53,147 54,146 55,146 56,146 56,145 57,145 57,144 58,144 59,143 59,143 60,142 61,142 62,142 62,141 63,141 64,140 64,140 65,140 66,140 67,139 67,139 68,139 69,138 70,138 70,138 71,138 72,138 73,138 74,137 74,137 75,137 76,137 77,137 78,137 78,137 79,137 80,137 81,137 82,137 82,137 83,137 84,137 85,138 85,138 86,138 87,138 88,138 89,138 89,139 90,139 91,139 92,140 92,140 93,140 94,140 95,141 95,141 96,142 97,142 97,142 98,143 99,143 99,144 100,144 100,72 15,72 15,144" onmouseover="UpdateTooltip(this,5,5)" onfocus="UpdateTooltip(this,5,5)" onclick="return OnShapeClick(5,5);" onkeyup="OnShapeKey(5,5);">
+  <AREA shape="POLYGON" tabindex="1" ALT="初始状态(state)： (S0)未选导师" origTitle="初始状态(state)： (S0)未选导师" TITLE="初始状态(state)： (S0)未选导师"  target="_top" COORDS=" 15,60 16,60 17,61 17,61 18,62 19,62 20,62 21,63 21,63 22,63 23,64 24,64 25,64 25,64 26,64 27,65 28,65 29,65 30,65 31,65 31,65 32,65 33,66 34,66 35,66 36,66 37,66 38,66 38,66 39,66 40,65 41,65 42,65 43,65 44,65 44,65 45,65 46,64 47,64 48,64 49,64 50,64 50,63 51,63 52,63 53,62 54,62 54,62 55,61 56,61 57,60 57,60 58,60 59,59 60,59 61,58 61,58 62,58 63,57 64,57 65,57 65,57 66,56 67,56 68,56 69,56 70,55 71,55 71,55 72,55 73,55 74,55 75,55 76,55 77,55 77,54 78,54 79,54 80,54 81,55 82,55 83,55 83,55 84,55 85,55 86,55 87,55 88,55 89,56 89,56 90,56 91,56 92,57 93,57 94,57 94,57 95,58 96,58 97,58 98,59 98,59 99,60 100,60 100,21 15,21 15,60" onmouseover="UpdateTooltip(this,5,3)" onfocus="UpdateTooltip(this,5,3)" onclick="return OnShapeClick(5,3);" onkeyup="OnShapeKey(5,3);">
+</MAP>
+
+
+
+</DIV>
+
+</body>
+</html>
+

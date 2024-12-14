@@ -1,0 +1,227 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" 
+ xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>系统流程图精简版</title>
+<style type="text/css">
+	 v\:* { behavior: url(#default#VML); }
+</style>
+
+<script src="vml_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+
+	var pageID = 0;
+	var viewMgr = null;
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+	function getPNZ()
+	{
+		var rawHTML = VMLDiv.innerHTML;
+		var strReturn = ""
+		
+		strReturn = rawHTML.slice( rawHTML.indexOf( '<v:group' ), rawHTML.indexOf( "</v:shape>" ) );
+		strReturn += "</v:shape></v:group>\n";
+				
+		return strReturn;
+	}
+	
+	function load()
+	{
+		viewMgr = new parent.CViewMgr("ConvertedImage", "arrowDiv");
+
+		viewMgr.put_Location = ViewMgrSetVMLLocation;
+
+
+		viewMgr.visBBoxLeft = 0.195184;
+		viewMgr.visBBoxRight = 8.190643;
+		viewMgr.visBBoxBottom = 4.053451;
+		viewMgr.visBBoxTop = 11.418990;
+
+		viewMgr.Zoom = VMLZoomChange;
+		viewMgr.setView= VMLSetView;
+
+		viewMgr.SupportsDetails = true;
+		viewMgr.SupportsSearch = true;
+
+		parent.viewMgr = viewMgr;
+
+		fit();
+	}
+
+	function unload()
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+
+	function fit()
+	{
+		if(parent.frmToolbar)
+		{
+			if (parent.g_WidgetsLoaded)
+			{
+				var zoom100 = parent.frmToolbar.document.all('a100');
+				if (zoom100)
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					zoom100.click();
+				}
+				else
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					viewMgr.Zoom(100);
+				}
+			}
+			else
+			{
+				window.setTimeout("fit()", 500);
+			}
+		}	
+		else
+		{
+			parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+			viewMgr.Zoom(100);
+		}
+	}
+
+	function PostZoomProcessing (newZoomLevel)
+	{
+		parent.viewMgr.PostZoomProcessing = null;
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.viewMgr.getPNZ = getPNZ;
+		parent.CurPageUpdate (pageIndex);
+	}
+
+
+	
+	var isUpLevel = parent.isUpLevel;
+	var OnShapeClick = parent.OnShapeClick;
+	var OnShapeKey = parent.OnShapeKey;
+	var UpdateTooltip = parent.UpdateTooltip;
+	var clickMenu = parent.clickMenu;
+	var toggleMenuDiv = parent.toggleMenuDiv;
+	var toggleMenuLink = parent.toggleMenuLink;
+	var GoToPage = parent.GoToPage;
+
+	window.onload = load;
+	window.onunload = unload;
+	document.onclick = clickMenu;
+
+
+
+
+</script>
+
+</head>
+
+<body style="MARGIN:10px" onresize="VMLOnResize();" onscroll="VMLOnScroll();">
+
+<div id="arrowdiv" style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+
+
+
+<div id="VMLDiv" >
+
+
+<v:group  id="ConvertedImage" style="width:4.342091in;height:4.000000in;position:absolute;visibility=hidden;" coordSize="2171,2000" coordOrigin="-1000,-1000" >
+
+<v:shapetype 
+  id="VISSHAPE"
+  target="_parent"
+  coordsize="2171,2000"
+  coordorigin="-1000,-1000"
+  stroked="f"
+  strokecolor="red"
+  filled="t"
+>
+<v:fill opacity="0.0"/>
+</v:shapetype>
+
+
+<v:shape style="top:-1000.0;left:-1000.0;width:2171.0;height:2000.0;position:absolute" coordSize="2171,2000" coordOrigin="-1000,-1000" >
+<v:imagedata src="vml_1.emz"/>
+</v:shape>
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="" origTitle=""  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -995,591 l -303,591 l -303,-804 l -995,-804 l -995,591xe" onmouseover="UpdateTooltip(this,0,2)" onclick="OnShapeClick(0,2)" onfocus="UpdateTooltip(this,0,2);" onkeyup="OnShapeKey(0,2)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="" origTitle=""  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -261,591 l 474,591 l 474,5 l -261,5 l -261,591xe" onmouseover="UpdateTooltip(this,0,3)" onclick="OnShapeClick(0,3)" onfocus="UpdateTooltip(this,0,3);" onkeyup="OnShapeKey(0,3)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="" origTitle=""  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m 495,591 l 1166,591 l 1166,6 l 495,6 l 495,591xe" onmouseover="UpdateTooltip(this,0,4)" onclick="OnShapeClick(0,4)" onfocus="UpdateTooltip(this,0,4);" onkeyup="OnShapeKey(0,4)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="管理员Client端" origTitle="管理员Client端"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -836,-687 l -516,-687 l -516,-766 l -836,-766 l -836,-687xe" onmouseover="UpdateTooltip(this,0,5)" onclick="OnShapeClick(0,5)" onfocus="UpdateTooltip(this,0,5);" onkeyup="OnShapeKey(0,5)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="系统入口" origTitle="系统入口"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -420,-915 l -154,-915 l -154,-995 l -420,-995 l -420,-915xe" onmouseover="UpdateTooltip(this,0,6)" onclick="OnShapeClick(0,6)" onfocus="UpdateTooltip(this,0,6);" onkeyup="OnShapeKey(0,6)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="登录" origTitle="登录"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -789,-450 l -676,-397 l -563,-450 l -676,-503 l -789,-450xe" onmouseover="UpdateTooltip(this,0,42)" onclick="OnShapeClick(0,42)" onfocus="UpdateTooltip(this,0,42);" onkeyup="OnShapeKey(0,42)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="" origTitle=""  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -266,-16 l 1166,-16 l 1166,-804 l -266,-804 l -266,-16xe" onmouseover="UpdateTooltip(this,0,45)" onclick="OnShapeClick(0,45)" onfocus="UpdateTooltip(this,0,45);" onkeyup="OnShapeKey(0,45)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Web端" origTitle="Web端"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m 296,-687 l 589,-687 l 589,-767 l 296,-767 l 296,-687xe" onmouseover="UpdateTooltip(this,0,7)" onclick="OnShapeClick(0,7)" onfocus="UpdateTooltip(this,0,7);" onkeyup="OnShapeKey(0,7)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="学生" origTitle="学生"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -218,-370 l -80,-370 l -80,-450 l -218,-450 l -218,-370xe" onmouseover="UpdateTooltip(this,0,8)" onclick="OnShapeClick(0,8)" onfocus="UpdateTooltip(this,0,8);" onkeyup="OnShapeKey(0,8)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="导师" origTitle="导师"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m 93,-370 l 240,-370 l 240,-450 l 93,-450 l 93,-370xe" onmouseover="UpdateTooltip(this,0,10)" onclick="OnShapeClick(0,10)" onfocus="UpdateTooltip(this,0,10);" onkeyup="OnShapeKey(0,10)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="已注册" origTitle="已注册"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m 503,-610 l 447,-636 l 392,-610 l 391,-610 l 391,-610 l 334,-583 l 447,-530 l 561,-583 l 504,-610 l 504,-610 l 503,-610xe" onmouseover="UpdateTooltip(this,0,23)" onclick="OnShapeClick(0,23)" onfocus="UpdateTooltip(this,0,23);" onkeyup="OnShapeKey(0,23)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="登录" origTitle="登录"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m 334,-325 l 447,-271 l 561,-325 l 447,-378 l 334,-325xe" onmouseover="UpdateTooltip(this,0,24)" onclick="OnShapeClick(0,24)" onfocus="UpdateTooltip(this,0,24);" onkeyup="OnShapeKey(0,24)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="注册" origTitle="注册"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -120,-543 l 173,-543 l 173,-623 l -120,-623 l -120,-543xe" onmouseover="UpdateTooltip(this,0,25)" onclick="OnShapeClick(0,25)" onfocus="UpdateTooltip(this,0,25);" onkeyup="OnShapeKey(0,25)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="管理主窗口" origTitle="管理主窗口"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -809,-181 l -543,-181 l -543,-240 l -809,-240 l -809,-181xe" onmouseover="UpdateTooltip(this,0,11)" onclick="OnShapeClick(0,11)" onfocus="UpdateTooltip(this,0,11);" onkeyup="OnShapeKey(0,11)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="系统公告管理" origTitle="系统公告管理"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -889,188 l -830,188 l -830,-102 l -889,-102 l -889,188xe" onmouseover="UpdateTooltip(this,0,16)" onclick="OnShapeClick(0,16)" onfocus="UpdateTooltip(this,0,16);" onkeyup="OnShapeKey(0,16)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="学生管理" origTitle="学生管理"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -750,188 l -692,188 l -692,-102 l -750,-102 l -750,188xe" onmouseover="UpdateTooltip(this,0,43)" onclick="OnShapeClick(0,43)" onfocus="UpdateTooltip(this,0,43);" onkeyup="OnShapeKey(0,43)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="导师管理" origTitle="导师管理"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -609,188 l -551,188 l -551,-102 l -609,-102 l -609,188xe" onmouseover="UpdateTooltip(this,0,46)" onclick="OnShapeClick(0,46)" onfocus="UpdateTooltip(this,0,46);" onkeyup="OnShapeKey(0,46)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="系统设置" origTitle="系统设置"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -463,188 l -404,188 l -404,-102 l -463,-102 l -463,188xe" onmouseover="UpdateTooltip(this,0,47)" onclick="OnShapeClick(0,47)" onfocus="UpdateTooltip(this,0,47);" onkeyup="OnShapeKey(0,47)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="" origTitle=""  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -261,229 l 1166,229 l 1166,59 l -261,59 l -261,229xe" onmouseover="UpdateTooltip(this,0,54)" onclick="OnShapeClick(0,54)" onfocus="UpdateTooltip(this,0,54);" onkeyup="OnShapeKey(0,54)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="通知信息" origTitle="通知信息"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m 33,181 l 208,181 l 208,96 l 33,96 l 33,181xe" onmouseover="UpdateTooltip(this,0,56)" onclick="OnShapeClick(0,56)" onfocus="UpdateTooltip(this,0,56);" onkeyup="OnShapeKey(0,56)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="个人信息显示" origTitle="个人信息显示"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m 495,181 l 804,181 l 804,96 l 495,96 l 495,181xe" onmouseover="UpdateTooltip(this,0,57)" onclick="OnShapeClick(0,57)" onfocus="UpdateTooltip(this,0,57);" onkeyup="OnShapeKey(0,57)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="" origTitle=""  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -261,538 l 1166,538 l 1166,325 l -261,325 l -261,538xe" onmouseover="UpdateTooltip(this,0,75)" onclick="OnShapeClick(0,75)" onfocus="UpdateTooltip(this,0,75);" onkeyup="OnShapeKey(0,75)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="选导师" origTitle="选导师"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m 38,469 l 197,469 l 197,410 l 38,410 l 38,469xe" onmouseover="UpdateTooltip(this,0,72)" onclick="OnShapeClick(0,72)" onfocus="UpdateTooltip(this,0,72);" onkeyup="OnShapeKey(0,72)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="选学生" origTitle="选学生"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m 575,469 l 735,469 l 735,410 l 575,410 l 575,469xe" onmouseover="UpdateTooltip(this,0,73)" onclick="OnShapeClick(0,73)" onfocus="UpdateTooltip(this,0,73);" onkeyup="OnShapeKey(0,73)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="" origTitle=""  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m 504,889 l 661,889 l 661,731 l 504,731 l 504,889xe" onmouseover="UpdateTooltip(this,0,163)" onclick="OnShapeClick(0,163)" onfocus="UpdateTooltip(this,0,163);" onkeyup="OnShapeKey(0,163)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="数据文件" origTitle="数据文件"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -621,794 l -621,845 l -470,845 l -470,794 l -621,794xe" onmouseover="UpdateTooltip(this,0,170)" onclick="OnShapeClick(0,170)" onfocus="UpdateTooltip(this,0,170);" onkeyup="OnShapeKey(0,170)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="数据文件" origTitle="数据文件"  style="top:-1000;left:-1000;width:2171;height:2000;position:absolute" path=" m -303,722 l -305,725 l -307,728 l -308,732 l -310,735 l -311,739 l -313,742 l -314,745 l -315,749 l -316,752 l -318,756 l -319,759 l -320,763 l -321,767 l -322,770 l -323,774 l -323,777 l -324,781 l -325,785 l -325,788 l -326,792 l -326,796 l -327,799 l -327,803 l -328,807 l -328,810 l -328,814 l -328,818 l -328,821 l -328,825 l -328,829 l -328,832 l -328,836 l -327,840 l -327,844 l -326,847 l -326,851 l -325,855 l -325,858 l -324,862 l -323,865 l -323,869 l -322,873 l -321,876 l -320,880 l -319,883 l -318,887 l -316,890 l -315,894 l -314,897 l -313,901 l -311,904 l -310,908 l -308,911 l -307,914 l -305,918 l -303,921 l -303,921 l -294,916 l -296,913 l -298,910 l -299,906 l -301,903 l -302,900 l -303,897 l -305,893 l -306,890 l -307,887 l -308,883 l -309,880 l -310,876 l -311,873 l -312,869 l -313,866 l -314,862 l -315,859 l -315,855 l -316,852 l -316,848 l -317,845 l -317,841 l -317,837 l -318,834 l -318,830 l -318,827 l -318,823 l -318,820 l -318,816 l -318,812 l -318,809 l -317,805 l -317,802 l -317,798 l -316,795 l -316,791 l -315,787 l -315,784 l -314,780 l -313,777 l -312,773 l -311,770 l -310,766 l -309,763 l -308,760 l -307,756 l -306,753 l -305,749 l -303,746 l -302,743 l -301,740 l -299,736 l -298,733 l -296,730 l -294,727xe" onmouseover="UpdateTooltip(this,0,170)" onclick="OnShapeClick(0,170)" onfocus="UpdateTooltip(this,0,170);" onkeyup="OnShapeKey(0,170)"/> 
+
+</v:group>
+
+
+
+</div>
+
+
+
+</body>
+</html>
+

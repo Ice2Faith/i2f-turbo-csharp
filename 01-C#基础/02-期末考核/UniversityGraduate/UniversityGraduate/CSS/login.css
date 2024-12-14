@@ -1,0 +1,40 @@
+﻿*{
+    margin:0px;
+    padding:0px;
+    font-family:FangSong;
+    color:black;
+}
+.LoginTable{
+    width:350px;
+    margin-top:80px;
+}
+.LoginTable tr{
+    height:40px;
+}
+.LoginTable tr td *{
+    height:20px;
+    width:100%;
+}
+.Fill{
+    height:100%;
+    width:100%;
+    margin:0px;
+    padding:0px;
+}
+.CentralHor{
+    text-align:center;
+    color:#0094ff;
+}
+.CentralAbsolute{
+    width:350px;
+    margin:0px auto;
+}
+.LoginBtn{
+    background:#4cff00;
+}
+.RegsiterBtn{
+    background:#ff6a00;
+}
+.BackLoginBtn{
+    background:#4cff00;
+}

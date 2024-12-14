@@ -39,3 +39,12 @@
 **/~$*
 **/*.bak
 **/*.tmp
+**/*.cache
+
+## project file
+Debug
+Release
+**/*.dll
+**/*.pdb
+**/*.idb
+**/*.dll.config

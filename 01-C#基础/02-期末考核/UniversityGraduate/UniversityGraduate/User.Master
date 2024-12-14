@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="UniversityGraduate.User" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <link href="CSS/stdpage.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="stdlayout">
+            <div class="header" style="border: 1px solid #808080; background: linear-gradient(to bottom,#efe7e4,#f5feff);">
+                <div class="left">
+                    <div class="logo-big">大学生毕业选导师系统</div>
+                    <asp:ContentPlaceHolder ID="HeaderLeft" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div class="center">
+                    <asp:ContentPlaceHolder ID="HeaderCenter" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div class="right">
+                    <asp:ContentPlaceHolder ID="HeaderRight" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="ContentBody" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <div class="footer" style="border: 1px solid #808080; background: linear-gradient(to bottom,#efe7e4,#f5feff);">
+                <div class="left">
+                    <div class="logo-small">大学生毕业选导师系统</div>
+                    <asp:ContentPlaceHolder ID="FooterLeft" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div class="center">
+                    <div class="AuthText">站点建立者：Ugex<br />
+                        版权和最终解释权归建立者所有</div>
+                </div>
+                <div class="right">
+                    <asp:ContentPlaceHolder ID="FooterRight" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
